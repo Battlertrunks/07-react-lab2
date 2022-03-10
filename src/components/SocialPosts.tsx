@@ -9,28 +9,31 @@ const SocialPosts = () => {
     {
       title: "Grand Circus",
       thought: "Grand Circus is cool.",
-      key: 1,
+      key: 0,
     },
     {
       title: "React",
       thought: "React give me power!",
-      key: 2,
+      key: 1,
     },
     {
       title: "Beatrice",
       thought: "My friend Beatrice has mad skills. she made the top 10!",
-      key: 3,
+      key: 2,
     },
   ]);
   const [formModal, setFormModal] = useState(false);
 
   const deleteThought = (key: number): void => {
-    const index: number = thoughts.findIndex((thought) => thought.key === key);
     setThoughts((prev) => {
-      const copy = prev.map((item) => ({ ...item }));
-      copy.splice(index, 1);
-      return copy;
+      return [...prev.slice(0, key), ...prev.slice(key + 1)];
     });
+    // const index: number = thoughts.findIndex((thought) => thought.key === key);
+    // setThoughts((prev) => {
+    //   const copy = prev.map((item) => ({ ...item }));
+    //   copy.splice(index, 1);
+    //   return copy;
+    // });
   };
 
   const addThought = (thought: Post): void => {
@@ -60,7 +63,7 @@ const SocialPosts = () => {
           <PostInList
             information={thought}
             key={`${thought.title}${index}`}
-            onKey={index + 1}
+            identifier={index}
             onDelete={deleteThought}
           />
         ))}

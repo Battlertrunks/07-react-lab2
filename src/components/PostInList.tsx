@@ -1,15 +1,14 @@
-import { useState } from "react";
 import "./PostInList.css";
 import Post from "../models/Post";
 
 interface Props {
   information: Post;
-  onKey: number;
+  identifier: number;
   onDelete: (key: number) => void;
 }
 
-const PostInList = ({ information, onKey, onDelete }: Props) => {
-  information.key = onKey;
+const PostInList = ({ information, identifier, onDelete }: Props) => {
+  information.key = identifier;
   return (
     <li className="PostInList">
       <div>
