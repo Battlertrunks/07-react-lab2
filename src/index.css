@@ -1,13 +1,35 @@
-body {
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-family: "Homemade Apple", cursive;
+  font-size: 24px;
+}
+
+button,
+h2,
+p {
+  font-family: "Dosis", sans-serif;
+}
+
+button {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 14px;
 }

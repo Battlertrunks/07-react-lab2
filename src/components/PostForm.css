@@ -1,0 +1,66 @@
+.PostForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.PostForm form {
+  position: relative;
+  background-color: #79c5e8;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 600px;
+  padding: 25px 5px;
+  padding-top: 0px;
+  border-radius: 5px;
+}
+
+.PostForm p {
+  text-align: right;
+  font-size: 35px;
+  display: inline;
+}
+
+.PostForm i {
+  cursor: pointer;
+}
+
+.PostForm input {
+  padding: 8px 2px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.PostForm textarea {
+  height: 150px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.PostForm input,
+.PostForm textarea,
+.PostForm button {
+  border: 2px solid #333;
+  border-radius: 7px;
+}
+
+.PostForm input,
+.PostForm textarea,
+.PostForm button,
+.PostForm label {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.PostForm button {
+  height: 3.5rem;
+  cursor: pointer;
+}
